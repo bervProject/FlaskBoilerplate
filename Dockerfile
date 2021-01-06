@@ -4,4 +4,4 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 8000
-CMD ["gunicorn", "web:create_app()"]
+ENTRYPOINT ["./startup.sh"]
