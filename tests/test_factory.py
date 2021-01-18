@@ -3,7 +3,7 @@ from web import create_app
 
 def test_config():
     assert not create_app({
-        PONY={
+        'PONY': {
             'provider': 'postgres',
             'user': os.environ.get('PG_USER', 'postgres'),
             'password': os.environ.get('PG_PASSWORD', 'devpassword'),
@@ -12,7 +12,7 @@ def test_config():
         }
     }).testing
     assert create_app({'TESTING': True,
-                       PONY={
+                       'PONY': {
                            'provider': 'postgres',
                            'user': os.environ.get('PG_USER', 'postgres'),
                            'password': os.environ.get('PG_PASSWORD', 'devpassword'),
@@ -24,6 +24,7 @@ def test_config():
 def test_hello(client):
     response = client.get('/hello/')
     assert b'Hello, World!' in response.data
+
 
 def test_hello_with_name(client):
     response = client.get('/hello/berv')
