@@ -11,7 +11,7 @@ RUN pip install --prefix=/install -r /requirements.txt
 FROM base
 COPY --from=builder /install /usr/local
 RUN apk --no-cache add libpq
-COPY . .
 WORKDIR /app
+COPY . .
 RUN chmod +x ./startup.sh
 ENTRYPOINT ["./startup.sh"]
