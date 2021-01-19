@@ -1,14 +1,10 @@
 import os
-import tempfile
 import pytest
 from web import create_app
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def app():
-
-    db_fd, db_path = tempfile.mkstemp()
-
     app = create_app({
         'TESTING': True,
         'PONY': {
@@ -19,11 +15,7 @@ def app():
             'database': os.environ.get('PG_DB_NAME', 'bookdb')
         }
     })
-
-    yield app
-
-    os.close(db_fd)
-    os.unlink(db_path)
+    return app
 
 
 @pytest.fixture

@@ -1,6 +1,4 @@
 import os
-from web import create_app
-
 def test_hello(client):
     response = client.get('/hello/')
     assert b'Hello, World!' in response.data
