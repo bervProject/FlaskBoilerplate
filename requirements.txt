@@ -4,5 +4,5 @@ gunicorn==20.1.0
 pytest==6.2.1
 coverage==5.3.1
 pony==0.7.16
-psycopg2==2.8.6
+psycopg2==2.9.3
 flask-login==0.6.0
