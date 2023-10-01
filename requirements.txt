@@ -2,7 +2,7 @@ Flask==2.3.3
 autopep8==2.0.4
 gunicorn==21.2.0
 pytest==7.4.0
-coverage==7.3.0
+coverage==7.3.1
 pony==0.7.16
 psycopg2==2.9.7
 flask-login==0.6.2
