@@ -3,7 +3,7 @@ autopep8==2.0.4
 gunicorn==21.2.0
 pytest==7.4.0
 coverage==7.3.0
-pony==0.7.16
+pony==0.7.17
 psycopg2==2.9.8
 flask-login==0.6.2
 Werkzeug==2.3.7
