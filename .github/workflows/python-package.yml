@@ -59,7 +59,7 @@ jobs:
         coverage report -m
         coverage xml
     - name: Upload Coverage
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v5
   docker-build:
     needs: build
     if: github.event_name == 'pull_request'
