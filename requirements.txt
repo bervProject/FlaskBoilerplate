@@ -4,6 +4,6 @@ gunicorn==23.0.0
 pytest==8.4.2
 coverage==7.10.7
 pony==0.7.19
-psycopg2==2.9.10
+psycopg2==2.9.11
 flask-login==0.6.3
 Werkzeug==3.1.3
